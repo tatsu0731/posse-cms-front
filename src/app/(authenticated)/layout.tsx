@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
-import "./globals.css";
-import Sidebar from "./components/sidebar";
+import "../globals.css";
+import Sidebar from "../components/sidebar";
+import Help from "../components/help";
+import { Toaster } from "@/components/ui/sonner";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,6 +19,10 @@ export default function RootLayout({
       <body className="flex flex-row">
         <Sidebar />
         {children}
+        <div className="fixed bottom-4 right-4 z-50">
+          <Help />
+        </div>
+        <Toaster position="top-right" richColors/>
       </body>
     </html>
   );

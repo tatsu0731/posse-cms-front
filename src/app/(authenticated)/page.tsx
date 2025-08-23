@@ -1,4 +1,4 @@
-import UserInfo from "./feature/userInfo";
+import UserInfo from "../feature/userInfo";
 
 export default function Home() {
   return (
