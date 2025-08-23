@@ -1,6 +1,7 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 import { supabase } from "@/lib/supabase-client";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 
@@ -29,6 +30,9 @@ export default function AccountCard() {
                     <div>
                         <p className="text-gray-500 text-xs font-bold">POSSE③：3.5</p>
                         <p className="font-bold">本松 達裕</p>
+                    </div>
+                    <div>
+                        <Image src={"/icon/more-vertical.svg"} width={20} height={20} alt="" />
                     </div>
                 </HoverCardTrigger>
                 <HoverCardContent>

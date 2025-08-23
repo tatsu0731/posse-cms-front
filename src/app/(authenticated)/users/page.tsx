@@ -1,3 +1,4 @@
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Title from "../../components/title";
 import { Table, TableBody, TableCell, TableFooter, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
@@ -96,6 +97,7 @@ export default function Users() {
                 <Table>
                     <TableHeader>
                         <TableRow>
+                        <TableHead>icon</TableHead>
                         <TableHead>名前</TableHead>
                         <TableHead>期生</TableHead>
                         <TableHead>所属</TableHead>
@@ -106,6 +108,12 @@ export default function Users() {
                     <TableBody>
                         {Users.map((user) => (
                         <TableRow key={user.name}>
+                            <TableCell>
+                                <Avatar>
+                                    <AvatarImage src="https://github.com/tatsu0731.png" alt="@icon" />
+                                    <AvatarFallback>CN</AvatarFallback>
+                                </Avatar>
+                            </TableCell>
                             <TableCell>{user.name}</TableCell>
                             <TableCell>{user.generation}</TableCell>
                             <TableCell>{user.posse}</TableCell>

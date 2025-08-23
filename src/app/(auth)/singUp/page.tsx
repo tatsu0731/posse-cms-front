@@ -29,8 +29,7 @@ export default function SingUp() {
     }
 
     return (
-        <div className="w-full">
-            <Card className="flex justify-center max-w-sm">
+            <Card className="flex justify-center w-xl h-1/4">
                 <CardHeader>
                     <CardTitle>Login to your account</CardTitle>
                     <CardDescription>
@@ -72,6 +71,5 @@ export default function SingUp() {
                 <CardFooter className="flex-col gap-2">
                 </CardFooter>
             </Card>
-        </div>
     )
 }
