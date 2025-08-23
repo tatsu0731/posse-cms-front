@@ -4,7 +4,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import Title from "../components/title";
 import { Label } from "@/components/ui/label";
 
-const UserData = [
+const users = [
     {
         id: 1,
         label: "名前",
@@ -44,7 +44,7 @@ export default function Page() {
             <div className="pl-4 flex flex-col justify-center w-1/2">
                 <h2 className=" text-xl font-bold">基本情報</h2>
                 <div className="flex flex-col gap-y-4 ml-4 my-4">
-                    {UserData.map((user) => (
+                    {users.map((user) => (
                         <div key={user.id}>
                             <Label htmlFor={user.data}>{user.label}</Label>
                             <Input id={user.data} placeholder={user.placeholder}/>
