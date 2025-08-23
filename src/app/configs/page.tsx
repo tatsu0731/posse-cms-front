@@ -4,6 +4,39 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import Title from "../components/title";
 import { Label } from "@/components/ui/label";
 
+const UserData = [
+    {
+        id: 1,
+        label: "名前",
+        data: "name",
+        placeholder: "山田太郎",
+    },
+    {
+        id: 2,
+        label: "なまえ",
+        data: "name_rubi",
+        placeholder: "やまだたろう",
+    },
+    {
+        id: 3,
+        label: "ニックネーム",
+        data: "nickname",
+        placeholder: "やまちゃん",
+    },
+    {
+        id: 4,
+        label: "メールアドレス",
+        data: "address",
+        placeholder: "example.com",
+    },
+    {
+        id: 5,
+        label: "GitHub ID",
+        data: "github_id",
+        placeholder: "yama0401",
+    },
+];
+
 export default function Page() {
     return (
         <div className=" w-full">
@@ -11,16 +44,12 @@ export default function Page() {
             <div className="pl-4 flex flex-col justify-center w-1/2">
                 <h2 className=" text-xl font-bold">基本情報</h2>
                 <div className="flex flex-col gap-y-4 ml-4 my-4">
-                    <Label htmlFor="name">名前</Label>
-                    <Input id="name" placeholder="山田太郎"/>
-                    <Label htmlFor="name_rubi">なまえ</Label>
-                    <Input placeholder="やまだたろう"/>
-                    <Label htmlFor="">ニックネーム</Label>
-                    <Input placeholder="やまちゃん"/>
-                    <Label htmlFor="adress">メールアドレス</Label>
-                    <Input placeholder="example.com"/>
-                    <Label htmlFor="github_id">GitHub ID</Label>
-                    <Input id="github_id" placeholder="yama0401"/>
+                    {UserData.map((user) => (
+                        <div key={user.id}>
+                            <Label htmlFor={user.data}>{user.label}</Label>
+                            <Input id={user.data} placeholder={user.placeholder}/>
+                        </div>
+                    ))}
                     <Label htmlFor="birthday">生年月日</Label>
                     <div className="flex gap-2">
                         <Input placeholder="2005"/>
